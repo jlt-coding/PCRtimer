@@ -175,7 +175,7 @@ class Ui_PCRtimer(object):
                       self.anneal, self.extend, self.cycles]
 
     def calc(self):
-        # TODO: check for validity of input before calculating
+        # TODO: check for validity of input before calculating, especially in correlation with the picked enzyme
         currentvals = [x.value() for x in self.boxes]
         if 0 in currentvals or self.kbp == 0:
             result = "Invalid: Params can't be 0"
