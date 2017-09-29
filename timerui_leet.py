@@ -182,7 +182,7 @@ class Ui_PCRtimer(object):
             result = "Invalid: Params can't be 0"
         else:
             ## calculate end time from current settings
-            #result = "Expected duration: %s h" % mcalc(currentvals)
+            #result = "Expected duration: %s h" % mcalc(currentvals) # not yet implemented
             result = "Expected Duration: %s h" % str(sum(currentvals) // 6)
 
         self.lineEdit.setText(result)
@@ -192,7 +192,7 @@ class Ui_PCRtimer(object):
         dialsetting = self.fidelity.value()
 
         ## calculate the new setting from current values and dial setting
-        #result = kfidelity(currentvals, dialsetting)
+        #result = kfidelity(currentvals, dialsetting)  # not yet implemented
         result = [randint(10,100) for x in range(6)]
 
         [x.setValue(result[i]) for i, x in enumerate(self.boxes)]
