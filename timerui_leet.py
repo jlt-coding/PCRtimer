@@ -146,7 +146,6 @@ class Ui_PCRtimer(object):
         self.fidelity.valueChanged[int].connect(self.tune_fidelity)
         self.kbp.valueChanged[float].connect(self.calc)
 
-
         self.initialize_special_class_variables()
         self.retranslateUi(PCRtimer)
         QtCore.QMetaObject.connectSlotsByName(PCRtimer)
@@ -202,13 +201,3 @@ class Ui_PCRtimer(object):
         picked = presets[s]
         [x.setValue(picked[i]) for i, x in enumerate(self.boxes)]
         self.calc()
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    PCRtimer = QtWidgets.QDialog()
-    ui = Ui_PCRtimer()
-    ui.setupUi(PCRtimer)
-    PCRtimer.show()
-    sys.exit(app.exec_())
-
