@@ -7,9 +7,9 @@
 # where 75 should leave the factory settings unchanged, 0 is an overly quick PCR and 99 an overly thorough PCR.
 # both functions should return another list of 6 integers, representing the updated PCR parameters
 
+
 def mcalc(vals, prodsize):
     pass
-
 
 def kfidelity(vals, dial):
     pass
